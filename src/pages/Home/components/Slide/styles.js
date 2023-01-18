@@ -10,7 +10,6 @@ export const Content = styled.div`
   transition: transform 0.3s ease;
   .item {
     flex-shrink: 0;
-    width: 80%;
     border-radius: 4px;
     background-color: #eee;
     text-align: center;

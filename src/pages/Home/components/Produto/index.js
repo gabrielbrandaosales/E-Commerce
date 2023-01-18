@@ -22,7 +22,6 @@ export const Produto = () => {
         </div>
         <div style={{ padding: '1rem' }}>
           <h1>{product?.nome}</h1>
-
           <p className="preco">R$ {product?.preco}</p>
           <label>{product?.descricao}</label>
         </div>
