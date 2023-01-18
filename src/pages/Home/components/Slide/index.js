@@ -9,6 +9,7 @@ export const Slide = ({ slides }) => {
   React.useEffect(() => {
     if (contentRef) {
       const { width } = contentRef?.current.getBoundingClientRect();
+      console.log(width);
     }
     setPosition(-(533 * active));
   }, [active]);
@@ -20,6 +21,8 @@ export const Slide = ({ slides }) => {
   const handleNext = () => {
     if (active < slides.length - 1) setActive(active + 1);
   };
+
+  console.log(`Ativo: ${active}`);
   return (
     <Container>
       <Content
@@ -28,11 +31,9 @@ export const Slide = ({ slides }) => {
         {slides?.length > 0 &&
           slides.map((slide, index) => (
             <div
-              ref={contentRef}
               key={index}
               style={{ display: index > 0 ? 'none' : 'flex' }}
               className="item">
-              {console.log('index: ', index, 'active: ', active)}
               <img height={500} src={slide?.src} alt={slide?.title} />
             </div>
           ))}
