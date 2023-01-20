@@ -11,8 +11,14 @@ export const Produto = () => {
   React.useEffect(() => {
     axios
       .get('https://ranekapi.origamid.dev/json/api/produto/' + id)
-      .then((response) => setProduct(response.data));
+      .then(({ data }) => {
+        data.fotos.forEach((item, i) => {
+          item.id = i + 1;
+        });
+        setProduct(data);
+      });
   }, [id]);
+
   return (
     <div style={{ padding: '0 30%' }}>
       <Header />
