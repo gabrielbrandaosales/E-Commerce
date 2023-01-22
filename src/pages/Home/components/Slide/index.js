@@ -36,10 +36,12 @@ export const Slide = ({ slides }) => {
             </div>
           ))}
       </Content>
-      <Nav>
-        <button onClick={handlePrev}>Anterior</button>
-        <button onClick={handleNext}>Próximo</button>
-      </Nav>
+      {slides?.length > 1 && (
+        <Nav>
+          <button onClick={handlePrev}>Anterior</button>
+          <button onClick={handleNext}>Próximo</button>
+        </Nav>
+      )}
     </Container>
   );
 };

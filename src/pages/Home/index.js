@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Img, Container, Item } from './styles';
 import { Link } from 'react-router-dom';
 import { Header } from '../../components/Header';
+import { Head } from '../../components/Head';
 
 export const Home = () => {
   const [products, setProducts] = React.useState([]);
@@ -13,6 +14,7 @@ export const Home = () => {
   }, []);
   return (
     <div style={{ padding: '0 30%' }}>
+      <Head title="Produtos" />
       <Header />
       <Container>
         {products.map((product) => {

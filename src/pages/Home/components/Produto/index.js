@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Container } from './styles';
 import { Header } from '../../../../components/Header';
 import { Slide } from '../Slide';
+import { Head } from '../../../../components/Head';
 
 export const Produto = () => {
   const { id } = useParams();
@@ -21,6 +22,7 @@ export const Produto = () => {
 
   return (
     <div style={{ padding: '0 30%' }}>
+      <Head title={product?.nome} />
       <Header />
       <Container>
         <div style={{ margin: '0 1rem 0 0' }}>

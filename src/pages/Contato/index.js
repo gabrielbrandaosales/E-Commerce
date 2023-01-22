@@ -1,10 +1,12 @@
 import React from 'react';
+import { Head } from '../../components/Head';
 import { Header } from '../../components/Header';
 import { Container } from './styles';
 
 export const Contato = () => {
   return (
     <div style={{ padding: '0 30%' }}>
+      <Head title="Contato" />
       <Header />
       <Container>
         <div style={{ margin: '0 2rem 0 0' }}>
