@@ -22,10 +22,7 @@ cd E-Commerce
 npm i
 
 # Execute o projeto
-npm run dev
-
-# Execute os testes do projeto
-npm run test
+npm start
 ```
 
 ---
